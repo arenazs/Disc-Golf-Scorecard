@@ -1,0 +1,4 @@
+SELECT hole_number, par, current_pin_position, distance FROM course c
+JOIN hole h ON c.course_id = h.course_id
+JOIN pin p ON h.hole_id = p.hole_id
+WHERE current_pin_position = pin_position
